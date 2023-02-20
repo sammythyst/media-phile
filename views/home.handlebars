@@ -1,0 +1,22 @@
+<!-- create handlebar for when you click on a "note" and it expands so you can see entire note. -->
+  <main>
+  {{#if notes.length}}
+    {{#each notes as |note|}}
+      <div class="upload-list">
+        <div class="note">
+          <header class="note-title">
+            {{note.title}}
+          <div class="username">
+            <time class="date" datetime="">{{note.date}}</time>
+          </div>
+          </header>
+          <div class="note-desc">
+            {{note.description}}
+          </div>
+          <img class="image" src="http://localhost:3001/api/images/{{note.key}}">
+          </img>
+        </div>
+      </div>
+    {{/each}}
+  {{/if}}
+  </main>

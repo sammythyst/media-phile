@@ -1,0 +1,38 @@
+<!-- create handlebar for when you click on a "note" and it expands so you can see entire note. -->
+  {{#if notes.length}}
+    {{#each notes as |note|}}
+      <div class="upload-list">
+        <div class="note">
+          <header class="note-title">
+            {{note.title}}
+          <div class="username">
+            {{note.user_id}}
+            <time class="date" datetime="">{{note.date}}</time>
+          </div>
+          </header>
+          <div class="note-desc">
+            {{note.description}}
+          </div>
+          <img class="image" src="http://localhost:3001/api/images/{{note.key}}">
+        </img>
+        </div>
+    {{/each}}
+  {{/if}}
+
+      </div> 
+{{!-- 
+  <div class="col-md-6 project-list">
+    <h3>Current Projects:</h3>
+
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/note/{{Note.id}}">{{notes.title}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{Note.id}}">DELETE</button>
+      </div>
+    </div>
+  </div>
+</div> --}}
+
+{{!-- <script src="./js/profile.js"></script> --}}
